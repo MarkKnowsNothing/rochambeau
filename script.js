@@ -1,3 +1,5 @@
+// CHECKS BOTH PLAYER'S INPUT TO SEE IF ONE WINS OR NOT
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "Tie!"
@@ -33,6 +35,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// GETTING A RANDOM COMPUTER CHOICE
+
 function getComputerChoice() {
     switch (Math.floor(Math.random() * 3) + 1) {
         case 1:
@@ -46,12 +50,16 @@ function getComputerChoice() {
     }
 }
 
+// GAME FUNCTION
+
 function game() {
+    // Both players initial points
     playerPoint = 0
     computerPoint = 0
 
+    // Loop for five turns
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt(`ROCHAMBEAU - ROCK PAPER SCISSORS GAME || Choose your weapon (type in rock, paper or scissors). You have ${5 - i} times left.`).toLowerCase()
+        let playerSelection = prompt(`ROCHAMBEAU - ROCK PAPER SCISSORS GAME || Choose your weapon (type in rock, paper or scissors). You have ${5 - i} tries left.`).toLowerCase()
         let computerSelection = getComputerChoice()
 
         playRound(playerSelection, computerSelection)
@@ -63,14 +71,15 @@ function game() {
         console.log(`You: ${playerPoint / 2} || Computer: ${computerPoint / 2}`)  
     }
 
+    // Checks final result to announce the winner
     if (playerPoint === computerPoint) {
         return "It's a tie game! (Press Refresh or Ctrl + R to try again)"
     } else
     if (playerPoint > computerPoint) {
-        return "You've won this game! Wanna try again? (Press Refresh or Ctrl + R to try again)"
+        return "You won this game! Wanna try again? (Press Refresh or Ctrl + R to try again)"
     } else
     if (playerPoint < computerPoint) {
-        return "You've lost this game! Try again next time? (Press Refresh or Ctrl + R to try again)"
+        return "The computer won this game! Try again next time? (Press Refresh or Ctrl + R to try again)"
     }
 }
 
