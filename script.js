@@ -4,8 +4,8 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "Tie!"
     } else
-    if (computerSelection === "rock") {
-        if (playerSelection === "paper") {
+    if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
             playerPoint++
             return "You win!"
         } else {
@@ -13,8 +13,8 @@ function playRound(playerSelection, computerSelection) {
             return "You lose!"
         }
     } else
-    if (computerSelection === "paper") {
-        if (playerSelection === "scissors") {
+    if (playerSelection === "scissors") {
+        if (computerSelection === "paper") {
             playerPoint++
             return "You win!"
         } else {
@@ -22,8 +22,8 @@ function playRound(playerSelection, computerSelection) {
             return "You lose!"
         }
     } else
-    if (computerSelection === "scissors") {
-        if (playerSelection === "rock") {
+    if (playerSelection === "rock") {
+        if (computerSelection === "scissors") {
             playerPoint++
             return "You win!"
         } else {
