@@ -68,7 +68,7 @@ function game() {
         console.log(`You: ${playerSelection}`)
         console.log(`Computer: ${computerSelection}`)
         console.log(playRound(playerSelection, computerSelection))
-        console.log(`You: ${playerPoint / 2} || Computer: ${computerPoint / 2}`)  
+        console.log(`You: ${playerPoint / 2} || Computer: ${computerPoint / 2}`) // Here we have to divide by 2 because the points are added unintentionally 2 times  
     }
 
     // Checks final result to announce the winner
