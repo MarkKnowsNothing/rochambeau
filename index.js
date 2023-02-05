@@ -5,7 +5,7 @@ const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
 const choices = document.querySelectorAll(".choice");
 
-const resetGame = document.querySelector("#reset");
+const reset = document.querySelector("#reset");
 
 // VARIABLES
 let playerSelection
@@ -15,6 +15,12 @@ let result
 let playerPoint = 0;
 let computerPoint = 0;
 
+function resetGame() {
+    playerPoint = 0;
+    computerPoint = 0;
+    scoreText.textContent = `Player: ${playerPoint} || Computer: ${computerPoint}`
+}
+
 choices.forEach(button => button.addEventListener("click", () => {
     playerSelection = button.textContent.toLowerCase();
     computerSelection = getComputerChoice();
@@ -22,6 +28,14 @@ choices.forEach(button => button.addEventListener("click", () => {
     computerText.textContent = `Computer: ${computerSelection.toUpperCase()}`;
     resultText.textContent = playRound();
     scoreText.textContent = `Player: ${playerPoint} || Computer: ${computerPoint}`;
+    if (playerPoint === 5) {
+        resetGame();
+        resultText.textContent = "You win the computer! Perhaps next time?";
+
+    } else if (computerPoint === 5) {
+        resetGame();
+        resultText.textContent = "You lose!";
+    }
 }));
 
 function getComputerChoice() {
@@ -74,8 +88,7 @@ function playRound() {
     }
 };
 
-resetGame.addEventListener("click", () => {
-    playerPoint = 0;
-    computerPoint = 0;
-    scoreText.textContent = `Player: ${playerPoint} || Computer: ${computerPoint}`
+reset.addEventListener("click", () => {
+    resetGame()
+    resultText.textContent = `Resetted. Select one of the buttons below to play.`
 });
