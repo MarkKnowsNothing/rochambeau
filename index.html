@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rochambeau</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./index.js" defer></script>
 </head>
 <body>
-    <div class="display-result">
-        <h3 id="scoreText">Player: 0 || Computer: 0</h3>
-        <h3 id="playerText">Player: </h3>
-        <h3 id="computerText">Computer: </h3>
-        <h3 id="resultText">Select one of the buttons below to play.</h3>
-    </div>
-    <div class="choices">
-        <button class="choice">Rock</button>
-        <button class="choice">Paper</button>
-        <button class="choice">Scissors</button>
-        <button id="reset">Reset</button>
-    </div>
+    <main>
+        <h1>MAN VS DINGLE</h1>
+        <div class="main__text">
+            <p>On February 29th, 2023, something happened that made a big shock for the entire world...</p>
+            <p>The cats with unusual genetics, which were accidentally created by scientists, are about to take over the world!</p>
+            <p>Now they can have access to the Internet and is threatening to destroy Github...</p>
+            <p>...unless you can defeat <a href="https://markknowsnothing.github.io/markool">Dingle</a> the cat in a game of rock paper scissors.</p>
+        </div>
+        <div class="main__play">
+            <h3 id="ruleHeader">First one to reach 5 wins. Choose your weapon!</h3>
+            <div class="main__play-choices">
+                <button id="rock" class="choice"><img src="./images/rock.png" alt="Rock"></button>
+                <button id="paper" class="choice"><img src="./images/paper.png" alt="Paper"></button>
+                <button id="scissors" class="choice"><img src="./images/scissors.png" alt="Scissors"></button>
+            </div>
+            <div class="main__play-result">
+                <div class="textCtn">
+                    <h3 id="scoreText">You: 0 || Dingle: 0</h3>
+                    <h4 id="playerText">You chose: </h3>
+                    <h4 id="computerText">Dingle chose: </h3>
+                </div>
+                <p id="resultText"></p>
+                <button id="reset"></button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

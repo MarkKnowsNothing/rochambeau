@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/** SCROLLBAR CUSTOMIZATIONS **/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;   
+}
+
+::selection {
+    background: #666;
+    color: white;
+}
+
+/** GENERAL STYLES **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) no-repeat fixed, url("./images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: text;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 1.5rem 0 .5rem 0;
+    font-size: 5rem;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+   }
+
+/** GAME SECTION **/
+
+/** Text **/
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main__play {
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem;
+    background-color: transparent;
+    border: 3px dashed white;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(240, 240, 240, .1);
+}
+
+.main__play-choices button img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.main__play-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.textCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
